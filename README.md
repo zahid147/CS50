@@ -1,1 +1,3 @@
 # CS50
+
+This my private CS50 repo that I worked on sometimes before...
