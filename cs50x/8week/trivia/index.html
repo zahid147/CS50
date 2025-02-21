@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener("DOMContentLoaded", function () {
+                const correct = document.querySelector(".correct");
+                correct.addEventListener("click", function () {
+                    correct.style.backgroundColor = "green";
+                    document.querySelector("#ans1").innerHTML = "Correct!";
+                });
+
+                const incorrect = document.querySelectorAll(".incorrect");
+                for(let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener("click", function () {
+                        incorrect[i].style.backgroundColor = "red";
+                        document.querySelector("#ans1").innerHTML = "Incorrect!";
+                    });
+                }
+
+                document.querySelector("#check").addEventListener("click", function () {
+                    const input = document.querySelector("#input");
+                    if (input.value.toLowerCase() === "you are gay!") {
+                        input.style.backgroundColor = "green";
+                        document.querySelector("#ans2").innerHTML = "Correct!"
+                    } else {
+                        input.style.backgroundColor = "red";
+                        document.querySelector("#ans2").innerHTML = "Incorrect!"
+                    }
+                })
+
+            })
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3 style="text-align: center;">Are you gay?</h3>
+                <div class="btns">
+                    <button id="t1" class="incorrect">Yes</button>
+                    <button id="t1" class="incorrect">No</button>
+                    <button id="t1" class="incorrect">Maybe</button>
+                    <button id="t1" class="incorrect">I don't know</button>
+                    <button id="t1" class="correct">You tell me!</button>
+                </div>
+                <p id="ans1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3 style="text-align: center;">Then who is gay?</h3>
+                <br>
+                <form>
+                    <input type="text" id="input">
+                    <button id="check">Check</button>
+                </form>
+                <p id="ans2"></p>
+            </div>
+        </div>
+    </body>
+</html>

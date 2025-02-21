@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: Because it takes significantly less time sorting already sorted list than random and reversed. Which clearly reflects quality of bubble sort.
+
+sort2 uses: Merge sort
+
+How do you know?: Because it takes less time sorting random and reversed list than the other two sorts. And also it is not significantly better at sorting already sorted list like sort1.
+
+sort3 uses: Selection sort
+
+How do you know?: Because it takes almost same time sorting all three type of list. Which is the quality of selection sort.
